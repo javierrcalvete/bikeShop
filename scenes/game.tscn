@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj26sbmw42iin"]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_hiaon"]
+[ext_resource type="PackedScene" uid="uid://draofau05xvbu" path="res://scenes/mud.tscn" id="1_ygpkm"]
+[ext_resource type="PackedScene" uid="uid://bqnch4o74rmuj" path="res://scenes/limpiador.tscn" id="2_76j67"]
+[ext_resource type="PackedScene" uid="uid://bl4qmkbgebqf4" path="res://scenes/bike.tscn" id="2_yqayn"]
+
+[node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_hiaon")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6, 6)
+
+[node name="Bike" parent="." instance=ExtResource("2_yqayn")]
+position = Vector2(-2, 1)
+
+[node name="Mud" parent="." instance=ExtResource("1_ygpkm")]
+
+[node name="Limpiador" parent="." instance=ExtResource("2_76j67")]
+position = Vector2(46, 6)

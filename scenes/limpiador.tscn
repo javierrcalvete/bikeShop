@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqnch4o74rmuj"]
+
+[ext_resource type="Script" path="res://scripts/limpiador.gd" id="1_1eboi"]
+[ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_88ukr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy3pk"]
+atlas = ExtResource("1_88ukr")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13f3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy3pk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm4i8"]
+size = Vector2(14, 10)
+
+[node name="Limpiador" type="Area2D"]
+script = ExtResource("1_1eboi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_13f3f")
+frame_progress = 0.913967
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 6)
+shape = SubResource("RectangleShape2D_tm4i8")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
