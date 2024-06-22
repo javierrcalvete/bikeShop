@@ -1,7 +1,8 @@
 extends Node
 
 #@onready var mud = $Mud
-
+# var for check if mouse is grabbing something
+var is_mouse_busy = false
 
 var clicks_mud = 0
 
