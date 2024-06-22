@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucoit"]
-size = Vector2(7, 5)
+size = Vector2(3, 5)
 
 [node name="Bike" type="Node2D"]
 
@@ -28,5 +28,5 @@ sprite_frames = SubResource("SpriteFrames_hlmdg")
 [node name="SaddleBikeArea2D" type="Area2D" parent="."]
 
 [node name="SaddleBikeCollision" type="CollisionShape2D" parent="SaddleBikeArea2D"]
-position = Vector2(-8.5, -16.5)
+position = Vector2(-7.5, -16.5)
 shape = SubResource("RectangleShape2D_ucoit")
