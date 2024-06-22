@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfx0sv6gnd8gi"]
+[gd_scene load_steps=7 format=3 uid="uid://bfx0sv6gnd8gi"]
 
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_8bxd0"]
 [ext_resource type="Script" path="res://scripts/wheel_back.gd" id="1_ikxnl"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="3_djbhf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgikc"]
 atlas = ExtResource("1_8bxd0")
@@ -30,4 +31,14 @@ sprite_frames = SubResource("SpriteFrames_25nic")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7dulv")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -17.0
+offset_top = 4.0
+offset_right = 20.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("3_djbhf")
+text = "BackWheel"
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

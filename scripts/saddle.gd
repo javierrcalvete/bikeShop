@@ -28,6 +28,7 @@ extends Area2D
 	#mouse_enter = true
 	#print("mouse entro")
 	#return mouse_entered
+	
 func _ready():
 	$Label.hide()
 
@@ -40,10 +41,12 @@ func _on_input_event(viewport, event, shape_idx):
 		selected = true
 		
 		
+		
 # lerp agarra 2 valores y lo interpola con la velocidad del 3 valor
 func _physics_process(delta):
 	if selected:
 		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)
+		$Label.show()
 
 # generic input events on scripts, captura todos los input events
 func _input(event):
