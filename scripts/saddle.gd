@@ -28,6 +28,8 @@ extends Area2D
 	#mouse_enter = true
 	#print("mouse entro")
 	#return mouse_entered
+func _ready():
+	$Label.hide()
 
 
 var selected = false
@@ -48,3 +50,10 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			selected = false
+
+
+func _on_mouse_entered():
+	$Label.show()
+
+func _on_mouse_exited():
+	$Label.hide()

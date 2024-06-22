@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx3d5y3ybqlyc"]
+[gd_scene load_steps=7 format=3 uid="uid://dx3d5y3ybqlyc"]
 
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_k8qgq"]
 [ext_resource type="Script" path="res://scripts/saddle.gd" id="1_o2blg"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="3_7clrc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qh6x"]
 atlas = ExtResource("1_k8qgq")
@@ -31,4 +32,15 @@ sprite_frames = SubResource("SpriteFrames_lr0hp")
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_f1npg")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -10.0
+offset_top = -3.0
+offset_right = 13.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("3_7clrc")
+theme_override_font_sizes/font_size = 16
+text = "Saddle"
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
