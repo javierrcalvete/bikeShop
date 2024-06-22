@@ -31,19 +31,23 @@ func delete_mud():
 
 # when Limpiador enter the area for the first time starts timer
 func _on_area_entered(area):
-	print(entro_limpiador)
+	
 	if area.name == "Limpiador" and entro_limpiador == false :
+		print(entro_limpiador)
 		entro_limpiador = true
 		print("entro el body")
 		timer.start()
-	else:
+		
+	elif (entro_limpiador) and area.name == "Limpiador":
 		timer.paused = false
+	
 
 func _on_area_exited(area):
 	if area.name == "Limpiador":
 		print("salio el body")
 		mud_time_left = timer.get_time_left()
 		print(mud_time_left)
+		
 		timer.paused= true
 
 func _on_timer_timeout():
