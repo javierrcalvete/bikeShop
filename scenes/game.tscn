@@ -17,19 +17,21 @@ script = ExtResource("1_hiaon")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(6, 6)
 
-[node name="Bike" parent="." instance=ExtResource("2_yqayn")]
+[node name="BikeParts" type="Node" parent="."]
+
+[node name="Bike" parent="BikeParts" instance=ExtResource("2_yqayn")]
 position = Vector2(-2, 1)
 
-[node name="Mud" parent="." instance=ExtResource("1_ygpkm")]
+[node name="Mud" parent="BikeParts" instance=ExtResource("1_ygpkm")]
 
-[node name="WheelFront" parent="." instance=ExtResource("6_nioxd")]
+[node name="WheelFront" parent="BikeParts" instance=ExtResource("6_nioxd")]
 position = Vector2(81, -19)
 
-[node name="Limpiador" parent="." instance=ExtResource("2_76j67")]
+[node name="Limpiador" parent="BikeParts" instance=ExtResource("2_76j67")]
 position = Vector2(78, 15)
 
-[node name="Saddle" parent="." instance=ExtResource("5_j26jv")]
+[node name="Saddle" parent="BikeParts" instance=ExtResource("5_j26jv")]
 position = Vector2(81, 4)
 
-[node name="WheelBack" parent="." instance=ExtResource("7_law5b")]
+[node name="WheelBack" parent="BikeParts" instance=ExtResource("7_law5b")]
 position = Vector2(79, -39)

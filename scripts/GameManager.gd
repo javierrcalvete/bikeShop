@@ -10,3 +10,6 @@ var clicks_mud = 0
 	#print(clicks_mud)
 	#if clicks_mud==10:
 		#
+
+# function grab and drop
+
