@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl4qmkbgebqf4"]
+[gd_scene load_steps=6 format=3 uid="uid://bl4qmkbgebqf4"]
 
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_ngv0d"]
 
@@ -20,6 +20,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucoit"]
 size = Vector2(3, 5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dil7e"]
+radius = 8.0
+
 [node name="Bike" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -30,3 +33,9 @@ sprite_frames = SubResource("SpriteFrames_hlmdg")
 [node name="SaddleBikeCollision" type="CollisionShape2D" parent="SaddleBikeArea2D"]
 position = Vector2(-7.5, -16.5)
 shape = SubResource("RectangleShape2D_ucoit")
+
+[node name="FrontWheelArea2D" type="Area2D" parent="."]
+
+[node name="FrontWheelCollision" type="CollisionShape2D" parent="FrontWheelArea2D"]
+position = Vector2(13, 1)
+shape = SubResource("CircleShape2D_dil7e")
