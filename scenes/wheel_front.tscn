@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://thgdbl2vee32"]
+[gd_scene load_steps=7 format=3 uid="uid://thgdbl2vee32"]
 
 [ext_resource type="Script" path="res://scripts/wheel_front.gd" id="1_dcjfr"]
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_imidk"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="3_6nxg7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7g6ge"]
 atlas = ExtResource("1_imidk")
@@ -32,10 +33,12 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_g65jq")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -16.0
-offset_top = 9.0
-offset_right = 24.0
-offset_bottom = 32.0
+offset_left = -21.0
+offset_top = 7.0
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("3_6nxg7")
+text = "frontWheel"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

@@ -5,6 +5,10 @@ var wheel_in_position = false
 
 var selected = false
 
+func _ready():
+	$Label.hide()
+	
+
 # variable para saber si se selecciono el collision shape, escucha solos los del collision
 func _on_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click") and game_manager.is_mouse_busy == false \
