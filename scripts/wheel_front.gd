@@ -49,10 +49,11 @@ func _on_area_entered(area):
 	print(area.name)
 	
 	if area.name == "FrontWheelArea2D":
-		self.global_position = Vector2(13, 2) #area of saddleBikeCollision on bike
+		self.global_position = area.global_position #area of saddleBikeCollision on bike
 		print(self.global_position)
 		wheel_in_position = true
 		release_left_mouse_button()
+		game_manager.add_score()
 		
 		#self.position=bike_saddle_area
 		

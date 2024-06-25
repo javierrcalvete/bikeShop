@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj26sbmw42iin"]
+[gd_scene load_steps=9 format=3 uid="uid://bj26sbmw42iin"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_hiaon"]
 [ext_resource type="PackedScene" uid="uid://draofau05xvbu" path="res://scenes/mud.tscn" id="1_ygpkm"]
 [ext_resource type="PackedScene" uid="uid://bqnch4o74rmuj" path="res://scenes/limpiador.tscn" id="2_76j67"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="2_rifxf"]
 [ext_resource type="PackedScene" uid="uid://bl4qmkbgebqf4" path="res://scenes/bike.tscn" id="2_yqayn"]
 [ext_resource type="PackedScene" uid="uid://dx3d5y3ybqlyc" path="res://scenes/saddle.tscn" id="5_j26jv"]
 [ext_resource type="PackedScene" uid="uid://thgdbl2vee32" path="res://scenes/wheel_front.tscn" id="6_nioxd"]
@@ -14,8 +15,16 @@
 unique_name_in_owner = true
 script = ExtResource("1_hiaon")
 
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = -87.0
+offset_top = -64.0
+offset_right = -43.0
+offset_bottom = -38.0
+theme_override_fonts/font = ExtResource("2_rifxf")
+theme_override_font_sizes/font_size = 32
+
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(5, 5)
 
 [node name="BikeParts" type="Node" parent="."]
 

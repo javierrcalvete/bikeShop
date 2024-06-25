@@ -52,5 +52,6 @@ func _on_area_exited(area):
 
 func _on_timer_timeout():
 	delete_mud()
+	game_manager.add_score()
 
 

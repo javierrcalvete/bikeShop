@@ -1,5 +1,6 @@
 extends Area2D
 @onready var game_manager = %GameManager
+var wheel_in_position = false
 func _ready():
 	$Label.hide()
 
@@ -34,3 +35,25 @@ func _on_mouse_entered():
 
 func _on_mouse_exited():
 	$Label.hide()
+
+
+func release_left_mouse_button():
+	var a = InputEventMouseButton.new()
+	a.set_button_index(1)
+	a.set_pressed(false)
+	Input.parse_input_event(a)
+
+
+# makes saddle stay in place on the bike
+func _on_area_entered(area):
+	print(area.name)
+	
+	if area.name == "BackWheelArea2D2":
+		self.global_position = area.global_position #area of saddleBikeCollision on bike
+		print(self.global_position)
+		wheel_in_position = true
+		release_left_mouse_button()
+		game_manager.add_score()
+		
+		#self.position=bike_saddle_area
+		
