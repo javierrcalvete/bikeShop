@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b23c2"]
-size = Vector2(2, 2)
+size = Vector2(3, 3)
 
 [node name="Handlebar" type="Area2D"]
 script = ExtResource("1_tmhvu")
@@ -29,7 +29,7 @@ script = ExtResource("1_tmhvu")
 sprite_frames = SubResource("SpriteFrames_6mgii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_b23c2")
 
 [node name="Label" type="Label" parent="."]
