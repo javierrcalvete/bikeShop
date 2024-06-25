@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bj26sbmw42iin"]
+[gd_scene load_steps=10 format=3 uid="uid://bj26sbmw42iin"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_hiaon"]
 [ext_resource type="PackedScene" uid="uid://draofau05xvbu" path="res://scenes/mud.tscn" id="1_ygpkm"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dx3d5y3ybqlyc" path="res://scenes/saddle.tscn" id="5_j26jv"]
 [ext_resource type="PackedScene" uid="uid://thgdbl2vee32" path="res://scenes/wheel_front.tscn" id="6_nioxd"]
 [ext_resource type="PackedScene" uid="uid://bfx0sv6gnd8gi" path="res://scenes/wheel_back.tscn" id="7_law5b"]
+[ext_resource type="PackedScene" uid="uid://1yf4shhohi5e" path="res://scenes/handlebar.tscn" id="8_adx2t"]
 
 [node name="Game" type="Node2D"]
 
@@ -37,10 +38,13 @@ position = Vector2(-2, 1)
 position = Vector2(81, -19)
 
 [node name="Limpiador" parent="BikeParts" instance=ExtResource("2_76j67")]
-position = Vector2(78, 15)
+position = Vector2(79, 36)
 
 [node name="Saddle" parent="BikeParts" instance=ExtResource("5_j26jv")]
 position = Vector2(81, 4)
+
+[node name="Handlebar" parent="BikeParts" instance=ExtResource("8_adx2t")]
+position = Vector2(82, 17)
 
 [node name="WheelBack" parent="BikeParts" instance=ExtResource("7_law5b")]
 position = Vector2(79, -39)
