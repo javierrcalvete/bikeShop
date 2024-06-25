@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b23c2"]
-size = Vector2(3, 3)
+size = Vector2(5, 3)
 
 [node name="Handlebar" type="Area2D"]
 script = ExtResource("1_tmhvu")

@@ -1,9 +1,12 @@
 extends Area2D
 @onready var game_manager = %GameManager
 
+
 var wheel_in_position = false
 
 var selected = false
+
+
 
 func _ready():
 	$Label.hide()
@@ -49,7 +52,7 @@ func _on_area_entered(area):
 	print(area.name)
 	
 	if area.name == "HandleBarArea2D":
-		self.global_position = area.global_position #area of saddleBikeCollision on bike
+		self.global_position = Vector2(10,-16)#area of saddleBikeCollision on bike
 		print(self.global_position)
 		wheel_in_position = true
 		release_left_mouse_button()
