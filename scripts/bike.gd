@@ -12,6 +12,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if game_manager.is_mouse_busy:
-		handleBar_area.visible = true
-	else:
-		handleBar_area.visible = false
+		match name_bikePart_grabbed:
+			"HandleBarArea2D":
+				handleBar_area.visible = true
+	

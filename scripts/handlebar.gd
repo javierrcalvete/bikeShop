@@ -73,8 +73,5 @@ func _on_area_entered(area):
 		#self.position=bike_saddle_area
 		
 
-
-
-
 func _on_area_exited(area):
 	wheel_in_position = false
