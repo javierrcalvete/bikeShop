@@ -17,15 +17,15 @@ unique_name_in_owner = true
 script = ExtResource("1_hiaon")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = -87.0
-offset_top = -64.0
-offset_right = -43.0
-offset_bottom = -38.0
+offset_left = -76.0
+offset_top = -43.0
+offset_right = -32.0
+offset_bottom = -17.0
 theme_override_fonts/font = ExtResource("2_rifxf")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(11.3, 11.3)
 
 [node name="BikeParts" type="Node" parent="."]
 
@@ -35,20 +35,18 @@ position = Vector2(-2, 1)
 [node name="Mud" parent="BikeParts" instance=ExtResource("1_ygpkm")]
 
 [node name="WheelFront" parent="BikeParts" instance=ExtResource("6_nioxd")]
-position = Vector2(81, -19)
+position = Vector2(-13, 26)
 
 [node name="Limpiador" parent="BikeParts" instance=ExtResource("2_76j67")]
-position = Vector2(79, 36)
+position = Vector2(25, 40)
 
 [node name="Saddle" parent="BikeParts" instance=ExtResource("5_j26jv")]
-position = Vector2(81, 4)
+position = Vector2(24, 21)
 
 [node name="WheelBack" parent="BikeParts" instance=ExtResource("7_law5b")]
-position = Vector2(79, -39)
+position = Vector2(-58, 29)
 
 [node name="Handlebar" parent="BikeParts" instance=ExtResource("8_adx2t")]
-position = Vector2(82, 17)
+position = Vector2(61, 28)
 
 [connection signal="area_entered" from="BikeParts/Saddle" to="BikeParts/Saddle" method="_on_area_entered"]
-
-[editable path="BikeParts/Handlebar"]

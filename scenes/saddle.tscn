@@ -33,14 +33,15 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_f1npg")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -10.0
-offset_top = -3.0
-offset_right = 13.0
-offset_bottom = 10.0
+offset_left = -11.0
+offset_top = 2.0
+offset_right = 12.0
+offset_bottom = 15.0
 theme_override_fonts/font = ExtResource("3_7clrc")
 theme_override_font_sizes/font_size = 16
 text = "Saddle"
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
