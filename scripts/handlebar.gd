@@ -1,6 +1,6 @@
 extends Area2D
 @onready var game_manager = %GameManager
-
+@onready var polygon2d = $HandleBarArea2D/Polygon2D
 
 var wheel_in_position = false
 
@@ -32,12 +32,13 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			selected = false
 			game_manager.is_mouse_busy = false
+			self.process_mode = Node.PROCESS_MODE_DISABLED
 			
-func release_left_mouse_button():
-	var a = InputEventMouseButton.new()
-	a.set_button_index(1)
-	a.set_pressed(false)
-	Input.parse_input_event(a)
+#func release_left_mouse_button():
+	#var a = InputEventMouseButton.new()
+	#a.set_button_index(1)
+	#a.set_pressed(false)
+	#Input.parse_input_event(a)
 
 
 func _on_mouse_entered():
@@ -47,18 +48,22 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	$Label.hide()
 
+func call_for_score():
+	#if wheel_in_position and game_manager.is_mouse_busy ==false :
+		game_manager.add_score()
 
 # makes saddle stay in place on the bike
 func _on_area_entered(area):
 	
 	
 	if area.name == "HandleBarArea2D":
-		self.global_position = Vector2(10,-16)#area of saddleBikeCollision on bike
-		release_left_mouse_button()
+		#self.global_position = Vector2(10,-16)#area of saddleBikeCollision on bike
+		#release_left_mouse_button()
 		print(self.global_position)
 		wheel_in_position = true
+		call_for_score()
 		
-		game_manager.add_score()
+		#game_manager.add_score()
 		
 		#self.position=bike_saddle_area
 		

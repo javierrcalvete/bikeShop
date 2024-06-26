@@ -54,7 +54,8 @@ func _on_area_entered(area):
 	
 	var bike_saddle_area
 	if area.name == "SaddleBikeArea2D":
-		self.global_position = Vector2(-7,-15)#area of saddleBikeCollision on bike
+		#self.global_position = Vector2(-7,-15)#area of saddleBikeCollision on bike
+		
 		saddle_in_position = true
 		release_left_mouse_button()
 		game_manager.add_score()
