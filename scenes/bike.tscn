@@ -26,7 +26,7 @@ size = Vector2(400000, 300001)
 radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dxcfi"]
-radius = 0.0
+radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4w36"]
 size = Vector2(3, 3)
@@ -64,7 +64,14 @@ polygon = PackedVector2Array(-2, -7, -6, -2, -2, 3, 2, -2)
 position = Vector2(-15, 2)
 
 [node name="BackWheelCollision" type="CollisionShape2D" parent="BackWheelArea2D2"]
+position = Vector2(2, 1)
 shape = SubResource("CircleShape2D_dxcfi")
+
+[node name="Polygon2D" type="Polygon2D" parent="BackWheelArea2D2"]
+position = Vector2(2, 2)
+scale = Vector2(1.33333, 1.25)
+color = Color(0.701961, 0.0666667, 0.298039, 0.564706)
+polygon = PackedVector2Array(0, -5, -3, -1, 0, 3, 3, -1)
 
 [node name="HandleBarArea2D" type="Area2D" parent="."]
 position = Vector2(9, -15)
