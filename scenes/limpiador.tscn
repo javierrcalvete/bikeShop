@@ -25,11 +25,11 @@ size = Vector2(14, 10)
 script = ExtResource("1_1eboi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -7)
 sprite_frames = SubResource("SpriteFrames_13f3f")
 frame_progress = 0.913967
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 6)
 shape = SubResource("RectangleShape2D_tm4i8")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
