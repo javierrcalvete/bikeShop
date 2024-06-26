@@ -42,7 +42,8 @@ func release_left_mouse_button():
 
 
 func _on_mouse_entered():
-	$Label.show()
+	if !saddle_in_position:
+		$Label.show()
 
 func _on_mouse_exited():
 	$Label.hide()
@@ -50,7 +51,7 @@ func _on_mouse_exited():
 
 # makes saddle satay in place on the bike
 func _on_area_entered(area):
-	print(area.name)
+	
 	var bike_saddle_area
 	if area.name == "SaddleBikeArea2D":
 		self.global_position = Vector2(-7,-15)#area of saddleBikeCollision on bike

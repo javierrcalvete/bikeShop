@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1yf4shhohi5e"]
+[gd_scene load_steps=8 format=3 uid="uid://1yf4shhohi5e"]
 
 [ext_resource type="Script" path="res://scripts/handlebar.gd" id="1_tmhvu"]
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_xwes4"]
@@ -8,11 +8,18 @@
 atlas = ExtResource("1_xwes4")
 region = Rect2(126, 14, 21, 14)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucg4a"]
+atlas = ExtResource("1_xwes4")
+region = Rect2(130, 0, 10, 12)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6mgii"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c258b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucg4a")
 }],
 "loop": true,
 "name": &"default",
@@ -26,21 +33,21 @@ size = Vector2(5, 3)
 script = ExtResource("1_tmhvu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_6mgii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_b23c2")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -17.0
-offset_top = 2.0
-offset_right = 18.0
-offset_bottom = 15.0
+offset_left = -18.0
+offset_right = 17.0
+offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("2_8qm17")
 text = "HandleBar"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

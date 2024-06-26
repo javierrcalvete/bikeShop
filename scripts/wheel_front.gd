@@ -38,7 +38,8 @@ func release_left_mouse_button():
 
 
 func _on_mouse_entered():
-	$Label.show()
+	if !wheel_in_position:
+		$Label.show()
 
 func _on_mouse_exited():
 	$Label.hide()

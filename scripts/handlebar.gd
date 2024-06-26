@@ -41,7 +41,8 @@ func release_left_mouse_button():
 
 
 func _on_mouse_entered():
-	$Label.show()
+	if !wheel_in_position:
+		$Label.show()
 
 func _on_mouse_exited():
 	$Label.hide()
@@ -49,13 +50,14 @@ func _on_mouse_exited():
 
 # makes saddle stay in place on the bike
 func _on_area_entered(area):
-	print(area.name)
+	
 	
 	if area.name == "HandleBarArea2D":
 		self.global_position = Vector2(10,-16)#area of saddleBikeCollision on bike
+		release_left_mouse_button()
 		print(self.global_position)
 		wheel_in_position = true
-		release_left_mouse_button()
+		
 		game_manager.add_score()
 		
 		#self.position=bike_saddle_area
