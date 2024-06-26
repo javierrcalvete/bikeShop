@@ -2,7 +2,7 @@ extends Node
 
 @onready var score_label = $ScoreLabel
 @onready var habldeBarNode=$"../BikeParts/Handlebar"
-
+var name_bikePart_grabbed
 #@onready var mud = $Mud
 # var for check if mouse is grabbing something
 var is_mouse_busy = false
