@@ -41,7 +41,6 @@ theme_override_fonts/font = ExtResource("3_7clrc")
 theme_override_font_sizes/font_size = 16
 text = "Saddle"
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]

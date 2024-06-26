@@ -19,7 +19,8 @@ func _on_input_event(viewport, event, shape_idx):
 		
 		selected = true
 		game_manager.is_mouse_busy = true
-		game_manager.name_bikePart_grabbed = str(self.name)
+		game_manager.name_bikePart_grabbed = self.name
+		
 		#print(game_manager.name_bikePart_grabbed)
 		
 		
