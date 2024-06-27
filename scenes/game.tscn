@@ -18,28 +18,31 @@ unique_name_in_owner = true
 script = ExtResource("1_hiaon")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = -78.0
-offset_top = -47.0
-offset_right = -34.0
-offset_bottom = -21.0
+offset_left = -22.0
+offset_top = -44.0
+offset_right = 22.0
+offset_bottom = -27.0
 theme_override_fonts/font = ExtResource("2_rifxf")
 theme_override_font_sizes/font_size = 16
 
 [node name="Menu" parent="GameManager" instance=ExtResource("10_542sw")]
-offset_left = -83.0
-offset_top = -20.0
-offset_right = -83.0
-offset_bottom = -20.0
+anchors_preset = -1
+anchor_left = 0.001
+offset_left = -73.92
+offset_top = -25.0
+offset_right = -1963.0
+offset_bottom = -1070.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(11.3, 11.3)
+zoom = Vector2(12.08, 12.08)
 
 [node name="BikeParts" type="Node" parent="."]
 
 [node name="Bike" parent="BikeParts" instance=ExtResource("2_yqayn")]
-position = Vector2(-2, 1)
+position = Vector2(1, 1)
 
 [node name="Mud" parent="BikeParts" instance=ExtResource("1_ygpkm")]
+position = Vector2(4, 0)
 
 [node name="WheelFront" parent="BikeParts" instance=ExtResource("6_nioxd")]
 position = Vector2(-13, 26)
