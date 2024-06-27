@@ -3,7 +3,7 @@ extends Area2D
 @onready var game_manager = %GameManager
 
 
-var selected = false
+var selected: bool = false
 
 func _ready():
 	$Label.hide()
@@ -35,7 +35,7 @@ func _input(event):
 
 #func _on_area_entered(area):
 	#if area.name == "Mud":
-		#$Label.show()
+		#$Label.show()	
 
 
 #func _on_area_exited(area):
@@ -44,6 +44,8 @@ func _input(event):
 
 func _on_mouse_entered():
 	$Label.show()
+	var hola: String = "hola"
+	
 
 
 func _on_mouse_exited():
