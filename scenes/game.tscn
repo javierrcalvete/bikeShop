@@ -18,18 +18,18 @@ unique_name_in_owner = true
 script = ExtResource("1_hiaon")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = -76.0
-offset_top = -43.0
-offset_right = -32.0
-offset_bottom = -17.0
+offset_left = -78.0
+offset_top = -47.0
+offset_right = -34.0
+offset_bottom = -21.0
 theme_override_fonts/font = ExtResource("2_rifxf")
 theme_override_font_sizes/font_size = 16
 
 [node name="Menu" parent="GameManager" instance=ExtResource("10_542sw")]
 offset_left = -83.0
-offset_top = -32.0
+offset_top = -20.0
 offset_right = -83.0
-offset_bottom = -32.0
+offset_bottom = -20.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(11.3, 11.3)
