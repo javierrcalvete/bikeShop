@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://csh7fkpmwk1x5"]
+
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_j5lqq"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="2_5so1w"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j5lqq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 28.0
+offset_bottom = 46.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5so1w")
+theme_override_font_sizes/font_size = 16
+text = "Exit"
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5so1w")
+theme_override_font_sizes/font_size = 16
+text = "Start"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]

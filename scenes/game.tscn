@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bj26sbmw42iin"]
+[gd_scene load_steps=11 format=3 uid="uid://bj26sbmw42iin"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_hiaon"]
 [ext_resource type="PackedScene" uid="uid://draofau05xvbu" path="res://scenes/mud.tscn" id="1_ygpkm"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://thgdbl2vee32" path="res://scenes/wheel_front.tscn" id="6_nioxd"]
 [ext_resource type="PackedScene" uid="uid://bfx0sv6gnd8gi" path="res://scenes/wheel_back.tscn" id="7_law5b"]
 [ext_resource type="PackedScene" uid="uid://1yf4shhohi5e" path="res://scenes/handlebar.tscn" id="8_adx2t"]
+[ext_resource type="PackedScene" uid="uid://csh7fkpmwk1x5" path="res://scenes/menu.tscn" id="10_542sw"]
 
 [node name="Game" type="Node2D"]
 
@@ -23,6 +24,12 @@ offset_right = -32.0
 offset_bottom = -17.0
 theme_override_fonts/font = ExtResource("2_rifxf")
 theme_override_font_sizes/font_size = 16
+
+[node name="Menu" parent="GameManager" instance=ExtResource("10_542sw")]
+offset_left = -83.0
+offset_top = -32.0
+offset_right = -83.0
+offset_bottom = -32.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(11.3, 11.3)
