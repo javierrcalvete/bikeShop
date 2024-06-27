@@ -9,15 +9,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	hide_areas()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	handleBar_area.visible = false
-	saddle_area.visible = false
-	frontWheel_area.visible = false
-	wheelBack_area.visible = false
+	hide_areas()
 	if game_manager.is_mouse_busy:
 # when bikepart grabbed show where to put it with area
 		print(game_manager.name_bikePart_grabbed)
@@ -31,3 +28,10 @@ func _process(delta):
 			'WheelBack':
 				wheelBack_area.visible = true
 			
+
+
+func hide_areas():
+	handleBar_area.visible = false
+	saddle_area.visible = false
+	frontWheel_area.visible = false
+	wheelBack_area.visible = false
