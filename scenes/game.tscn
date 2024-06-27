@@ -38,13 +38,13 @@ position = Vector2(-2, 1)
 position = Vector2(-13, 26)
 
 [node name="Saddle" parent="BikeParts" instance=ExtResource("5_j26jv")]
-position = Vector2(24, 21)
+position = Vector2(22, 31)
 
 [node name="WheelBack" parent="BikeParts" instance=ExtResource("7_law5b")]
 position = Vector2(-58, 29)
 
 [node name="Handlebar" parent="BikeParts" instance=ExtResource("8_adx2t")]
-position = Vector2(61, 28)
+position = Vector2(58, 33)
 
 [node name="Limpiador" parent="BikeParts" instance=ExtResource("2_76j67")]
-position = Vector2(25, 40)
+position = Vector2(57, -2)

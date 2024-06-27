@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqnch4o74rmuj"]
+[gd_scene load_steps=7 format=3 uid="uid://bqnch4o74rmuj"]
 
 [ext_resource type="Script" path="res://scripts/limpiador.gd" id="1_1eboi"]
 [ext_resource type="Texture2D" uid="uid://jy4b0bgtjq40" path="res://sprites/bike.png" id="1_88ukr"]
+[ext_resource type="FontFile" uid="uid://c70hnm5dg2vpn" path="res://assets/m3x6.ttf" id="3_kqj5s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hy3pk"]
 atlas = ExtResource("1_88ukr")
@@ -32,6 +33,17 @@ frame_progress = 0.913967
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tm4i8")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("3_kqj5s")
+theme_override_font_sizes/font_size = 16
+text = "limpiador"
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
