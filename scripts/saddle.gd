@@ -35,6 +35,7 @@ func _input(event):
 			selected = false
 			game_manager.is_mouse_busy = false
 			if wheel_in_position:
+				
 				call_for_score()
 				self.process_mode = Node.PROCESS_MODE_DISABLED #makes the handlebar not clickleabale
 			

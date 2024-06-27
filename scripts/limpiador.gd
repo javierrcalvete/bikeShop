@@ -44,7 +44,7 @@ func _input(event):
 
 func _on_mouse_entered():
 	$Label.show()
-	var hola: String = "hola"
+	
 	
 
 
