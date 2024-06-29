@@ -33,6 +33,15 @@ offset_top = -25.0
 offset_right = -1963.0
 offset_bottom = -1070.0
 
+[node name="Label" type="Label" parent="GameManager"]
+offset_left = -29.0
+offset_top = -16.0
+offset_right = 33.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("2_rifxf")
+theme_override_font_sizes/font_size = 32
+text = "YOU WIN"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(12.08, 12.08)
 
